@@ -11,6 +11,7 @@ namespace Jagua.Controllers
         // GET: Caja
         public ActionResult Index()
         {
+            //HOLI
             return View();
         }
     }
