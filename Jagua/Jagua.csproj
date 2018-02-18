@@ -144,6 +144,7 @@
     <Content Include="Content\assets\js\plugins\nouislider.min.js" />
     <None Include="Content\user.cshtml" />
     <Content Include="Global.asax" />
+    <Content Include="ReleaseNotes.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
