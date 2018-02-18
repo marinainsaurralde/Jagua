@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jagua", "Jagua\Jagua.csproj", "{A6F44B5D-1292-4E89-87F3-82985252BE73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jagua_Entities", "Jagua_Entities\Jagua_Entities.csproj", "{16BD482C-1382-4846-9F33-EC6D89224009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6F44B5D-1292-4E89-87F3-82985252BE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F44B5D-1292-4E89-87F3-82985252BE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F44B5D-1292-4E89-87F3-82985252BE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F44B5D-1292-4E89-87F3-82985252BE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BD482C-1382-4846-9F33-EC6D89224009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BD482C-1382-4846-9F33-EC6D89224009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BD482C-1382-4846-9F33-EC6D89224009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BD482C-1382-4846-9F33-EC6D89224009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44185B43-03AC-4F05-92E6-26CAB691E689}
+	EndGlobalSection
+EndGlobal
