@@ -50,6 +50,12 @@
     <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -162,11 +168,13 @@
     <Compile Include="Clases\DataTableExtensions.cs" />
     <Compile Include="Clases\FlashMessageExtensions.cs" />
     <Compile Include="Clases\Logger.cs" />
+    <Compile Include="Controllers\CajasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Caja.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -214,6 +222,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Cajas\Create.cshtml" />
+    <Content Include="Views\Cajas\Delete.cshtml" />
+    <Content Include="Views\Cajas\Details.cshtml" />
+    <Content Include="Views\Cajas\Edit.cshtml" />
+    <Content Include="Views\Cajas\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -223,10 +236,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JaguaEntityModel\JaguaEntityModel.csproj">
+      <Project>{3ac14e53-698d-4498-8e75-805b0c63461e}</Project>
+      <Name>JaguaEntityModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
