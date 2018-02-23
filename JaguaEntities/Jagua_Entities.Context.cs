@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Jagua_Entities
+namespace JaguaEntities
 {
     using System;
     using System.Data.Entity;
@@ -25,5 +25,6 @@ namespace Jagua_Entities
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<caja> caja { get; set; }
     }
 }

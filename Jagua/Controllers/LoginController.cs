@@ -1,4 +1,4 @@
-﻿using Jagua_Entities;
+﻿
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -10,13 +10,13 @@ namespace Jagua.Controllers
     {
 
         //private JaguaEntities db = new JaguaEntities();
-        //// GET: Login
+        // GET: Login
 
-        // [AllowAnonymous]
-        // public ActionResult Index()
+        //[AllowAnonymous]
+        //public ActionResult Index()
         //{
 
-        //    return View(new usuarios());
+        //    return View(new usuario());
         //}
 
 
@@ -25,18 +25,18 @@ namespace Jagua.Controllers
         //// POST: Login/Create
         //[HttpPost]
         //[AllowAnonymous]
-        // public ActionResult Autenticar([Bind(Include = "id,id_funcionario,id_perfil,usuario,contrasena")] usuarios usuarios, string returnUrl)
+        ////public ActionResult Autenticar([Bind(Include = "id,id_funcionario,id_perfil,usuario,contrasena")] usuarios usuarios, string returnUrl)
         //{
         //    try
         //    {
         //        if (ModelState.IsValid)
         //        {
         //            var usuario = login(usuarios.usuario, usuarios.contrasena);
-        //            if (usuario  != null)
+        //            if (usuario != null)
         //            {
         //                if (usuario.estado != "I")
         //                {
-        //                    if(usuario.perfiles.estado != "I")
+        //                    if (usuario.perfiles.estado != "I")
         //                    {
         //                        string req = Request.Url.Authority;
         //                        FormsAuthentication.SetAuthCookie(usuario.usuario, false);
@@ -57,13 +57,13 @@ namespace Jagua.Controllers
         //                    {
         //                        ModelState.AddModelError("", "No se pudo acceder, perfil inactivo, comuníquese con el administrador.");
         //                    }
-                            
+
         //                }
         //                else
         //                {
         //                    ModelState.AddModelError("", "No se pudo acceder, usuario inactivo, comuníquese con el administrador.");
         //                }
-                        
+
         //            }
         //            else
         //            {
@@ -73,11 +73,11 @@ namespace Jagua.Controllers
 
         //        return View("Index", usuarios);
         //    }
-        //    catch(Exception ex)
+        //    catch (Exception ex)
         //    {
         //        ModelState.AddModelError("", "Error en el servicio de autenticación.");
         //        Clases.Logger.Log.Debug(ex.Message);
-        //        return View("Index",usuarios);
+        //        return View("Index", usuarios);
         //    }
         //}
 
@@ -106,10 +106,10 @@ namespace Jagua.Controllers
         //    }
         //    catch (Exception ex)
         //    {
-                
+
         //        throw;
         //    }
-           
+
         //}
 
 
@@ -271,7 +271,7 @@ namespace Jagua.Controllers
         //        usuarios recuperar = db.usuarios.Where(x => x.usuario == usuarios.usuario).FirstOrDefault();
         //        if (recuperar != null)
         //        {
-                    
+
         //            if (usuarios.contrasena_nueva != usuarios.contrasena)
         //            {
         //                ViewBag.recuperar = "recuperar";
@@ -308,7 +308,7 @@ namespace Jagua.Controllers
         //                db.Entry(recuperar).State = EntityState.Modified;
         //                db.SaveChanges();
 
-                        
+
         //                Web.Gambling.Clases.LoggerApp.logApp("N/A", "N/A", 1, "N/A", "N/A", "en proceso de actualizacion - modificar contraseña  contraseña    :  " + usuarios.usuario, db);
         //                AutoMapper.Mapper.CreateMap<viewModelModificarPassword, ModificarPasswordDTO>();
         //                var datoactual = AutoMapper.Mapper.Map<ModificarPasswordDTO>(usuarios);

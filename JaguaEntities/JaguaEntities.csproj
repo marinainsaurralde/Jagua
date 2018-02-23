@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16BD482C-1382-4846-9F33-EC6D89224009}</ProjectGuid>
+    <ProjectGuid>{D38A0051-D7B8-475D-8910-D6CC6042021F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jagua_Entities</RootNamespace>
-    <AssemblyName>Jagua_Entities</AssemblyName>
+    <RootNamespace>JaguaEntities</RootNamespace>
+    <AssemblyName>JaguaEntities</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,46 +49,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Entities.Context.tt</DependentUpon>
+    <Compile Include="caja.cs">
+      <DependentUpon>Jagua_Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities.cs">
+    <Compile Include="Class1.cs" />
+    <Compile Include="Jagua_Entities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Entities.tt</DependentUpon>
+      <DependentUpon>Jagua_Entities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entities.Designer.cs">
+    <Compile Include="Jagua_Entities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Entities.edmx</DependentUpon>
+      <DependentUpon>Jagua_Entities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Jagua_Entities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jagua_Entities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Entities.edmx">
+    <EntityDeploy Include="Jagua_Entities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Entities.Designer.cs</LastGenOutput>
+      <LastGenOutput>Jagua_Entities.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="Entities.edmx.diagram">
-      <DependentUpon>Entities.edmx</DependentUpon>
+    <None Include="Jagua_Entities.edmx.diagram">
+      <DependentUpon>Jagua_Entities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Entities.Context.tt">
+    <Content Include="Jagua_Entities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Entities.Context.cs</LastGenOutput>
-      <DependentUpon>Entities.edmx</DependentUpon>
+      <LastGenOutput>Jagua_Entities.Context.cs</LastGenOutput>
+      <DependentUpon>Jagua_Entities.edmx</DependentUpon>
     </Content>
-    <Content Include="Entities.tt">
+    <Content Include="Jagua_Entities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Entities.edmx</DependentUpon>
-      <LastGenOutput>Entities.cs</LastGenOutput>
+      <DependentUpon>Jagua_Entities.edmx</DependentUpon>
+      <LastGenOutput>Jagua_Entities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
