@@ -1,39 +1,111 @@
 ﻿@model IEnumerable<JaguaEntityModel.caja>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cajas";
 }
-
-<h2>Index</h2>
+<html>
+@*<h2>Listado de Cajas</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.id_usuario)
-        </th>
-        <th></th>
-    </tr>
+    @Html.ActionLink("Crear Nueva Caja", "Create")
+</p>*@
+<head>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.id_usuario)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id_caja }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id_caja }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id_caja })
-        </td>
-    </tr>
+
+
+
+</head>
+<body>
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>@ViewBag.Title</h3>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            @using (Html.BeginForm("Index", "Cajas", FormMethod.Post, new { id = "frmList" }))
+            {
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Filtros de Busqueda<small></small></h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="form-group">
+                            <div id="flash-messages" class="alert alert-success" style="display:none;">
+                                <a class="close" href="#">&times;</a>
+                                <p></p>
+                            </div>
+
+                            @if (TempData["error"] != null)
+                            {
+                                <div class="alert alert-warning alert-dismissible fade in">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <strong>@TempData["error"].ToString()</strong>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Usuario Asignado</label>
+                            @Html.TextBox("txtUsuario", null, (String)ViewBag.txtUsuario, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="x_content">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            NRO CAJA
+                                        </th>
+                                        <th>
+                                            DESCRIPCION
+                                        </th>
+                                        <th>
+                                            USUARIO
+                                        </th>
+                                        <th></th>
+                                    </tr>
+
+                                    @foreach (var item in Model)
+        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.id_caja)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.descripcion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.id_usuario)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.id_caja }) |
+                                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_caja })
+                                </td>
+                            </tr>
 }
 
-</table>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

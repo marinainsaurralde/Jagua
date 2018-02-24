@@ -227,6 +227,7 @@
     <Content Include="Views\Cajas\Details.cshtml" />
     <Content Include="Views\Cajas\Edit.cshtml" />
     <Content Include="Views\Cajas\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutHome.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
